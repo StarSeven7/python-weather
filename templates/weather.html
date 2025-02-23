@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 'title' from server.py file-->
+    <!--<title> = browser's title bar i.e Tab name-->
+    <title>{{ title }} Weather</title>
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>{{ title }} Weather</h1>
+    <!-- 'title' from server.py file-->
+    <!-- double flower bracket should not be use in comments{}-->
+    <p>{{ status }} and {{ temp }} &deg;</p>
+    <!--&deg = Degree Centegrate-->
+    <p>Feels like {{ feels_like }} &deg;</p>
+
+    <form action="/weather">
+        <!--again search box in o/p page-->
+        <input type="text" name="city" id="city" placeholder="Enter a City--Weather File" />
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

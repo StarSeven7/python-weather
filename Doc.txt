@@ -1,0 +1,49 @@
+Code Source : https://github.com/gitdagray/python-course
+
+1) create virtual env and activate it.
+        => $ python3 -m venv .venv
+        => $ source ./activate #move source file folder
+        => $ source .venv/Scripts/activate
+        => $ deactivate on same locn
+        Note: make sure all work done in 'Git terminal' and at the end of every cmd you can see '(.venv)' which means vertual env is activated
+        
+2) create requirements.txt file 
+        => $ pip freeze > requirements.txt
+
+3) check existing packages 
+    => $ pip list
+    => $ pip install pip resources python-dotenv Flask
+    => $ python -m pip install -U pip --> upgrade pip
+    
+4) create .env file 
+    => 'add file' icon
+        API_KEY = bf19327c86de8da68631427e374d83d1   #consider this as string
+        a) https://openweathermap.org/
+        b) Registor, then click on your profile name and select 'My API Keys'.
+        c) click on 'Generate' button and give any name 'LiveWeatherApp'
+        d) copy key and paste in '.env' file as above
+5) create .gitignore file and add all files name which will not be added in sharable repositary 
+    => 'add file' icon
+        .venv
+        .env
+
+6) initialized the project
+    => $ git init   # initialized repositary and excluded file      which is mention in '.gitignore' file 
+
+7) Create two sub-folders under project folder 'Final-project'
+    => click on add folder icon by selecting project folder
+        a) static  ---> generally stores static files like css, java, images etc
+            i) css  --->folder 
+                1) style.css  --->file
+        b) templates ---> html files. Use python script to insert valuese in html file to build templates.
+            i) index.html
+                write html program, 
+                a shortcut is just press ctl + 1 and select '!' this is know as Emmet
+
+8) create 'weather.py' file on top under this project folder.
+    copy the url : 
+        a) go to website https://openweathermap.org
+        b) click on 'API' tab
+        c) click 'API doc' under 'Current Weather Data' healding block
+        d) copy url under 'API call' section and edit as per project 
+            https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
