@@ -1,5 +1,5 @@
 Code Source : https://github.com/gitdagray/python-course
-
+0) U = initialized ; A = Added in repositary
 1) create virtual env and activate it.
         => $ python3 -m venv .venv
         => $ source ./activate #move source file folder
