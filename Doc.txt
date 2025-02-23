@@ -47,3 +47,43 @@ Code Source : https://github.com/gitdagray/python-course
         c) click 'API doc' under 'Current Weather Data' healding block
         d) copy url under 'API call' section and edit as per project 
             https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+
+-------------- create repository and send to GitHub website---------------------
+$ git add .  ==> . present directory
+$ git commit -m "first commit"  ==> commit
+search in 'visual studio code' for .gitconfig and update as per below
+C:\Program Files\Git\.gitconfig
+=> [user]
+	name = Star Seven
+	email = you@example.com
+--------------------- send file to GitHub repositary website ---------------
+https://github.com/ --> create account
+athaullah43@gmail.com ;
+StarSeven7/ Maaden@12345 
+        a) create repositary
+            repositary name = python-weather
+        b) Public
+        c) click on 'repositary' button
+        d) copy all from section "…or push an existing repository from the command line"
+        f) after last command give you 100% with link "https://github.com/StarSeven7/python-weather.git"
+            that means uploaded to the github.
+
+----- To deployed this web app go to render.com, which pull these repositary file by on its own -------
+https://render.com/ ---> create account
+athaullah43@gmail / Maaden@12345
+Add New 'Web Service' and select connect Git provider as 'GitHub'
+once install...
+select the project and click 'connect'
+    a) Build command = pip install --upgrade pip && pip install -r requirements.txt
+# upgrade pip and install requirements.txt
+    b) Start command = python3 server.py
+    c) select Instance type = Free
+    d) Environment Variables = 
+        i) Name of the Variable = API_KEY
+        ii) value = bf1dsfasdfsf0fsdfa
+        iii) click 'Add Environment Variable' => Render website needs to know what version of python using
+        iv)  Name of the Variable = PYTHON_VERSION
+        v) value = 3.11.9 ==> get from python terminal by cmd 'python3 --version'
+    e) click 'deployed web Service' button
+    f) check logs on the same page.
+    
